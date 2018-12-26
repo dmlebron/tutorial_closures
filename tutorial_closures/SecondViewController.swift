@@ -11,13 +11,10 @@ import UIKit
 class SecondViewController: UIViewController {
     
     fileprivate lazy var textField: UITextField = {
-       
         let txt = UITextField()
         txt.returnKeyType = .done
         txt.backgroundColor = .groupTableViewBackground
         txt.layer.cornerRadius = 3.0
-        
-        
         txt.translatesAutoresizingMaskIntoConstraints = false
         txt.delegate = self
         
@@ -25,7 +22,6 @@ class SecondViewController: UIViewController {
     }()
     
     fileprivate lazy var cancelButton: UIButton = {
-        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel", for: .normal)
@@ -36,7 +32,6 @@ class SecondViewController: UIViewController {
     }()
     
     fileprivate lazy var updateButton: UIButton = {
-        
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Update", for: .normal)
@@ -60,27 +55,21 @@ class SecondViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
         textField.becomeFirstResponder()
     }
 }
 
 //MARK: UITextField Delegate
 extension SecondViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         hideKeyboard()
-        
         return false
     }
-    
 }
 
 //MARK: Private Methods
 private extension SecondViewController {
     func addConstraints() {
-        
         // textfield
         textField.topAnchor.constraint(equalTo: view.topAnchor, constant: 80).isActive = true
         textField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
@@ -118,13 +107,5 @@ private extension SecondViewController {
         }
         
         buttonAction(textField.text)
-        
     }
 }
-
-
-
-
-
-
-

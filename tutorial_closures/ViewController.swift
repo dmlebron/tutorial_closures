@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    fileprivate var textLabel: UILabel = {
-        
+    private var textLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
@@ -22,8 +21,7 @@ class ViewController: UIViewController {
         return label
     }()
     
-    fileprivate lazy var showVCButton: UIButton = {
-        
+    private lazy var showVCButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Show", for: .normal)
@@ -44,18 +42,16 @@ class ViewController: UIViewController {
         addConstraints()
     }
     
-    @objc internal func showViewController(sender: UIButton) {
-        
+    @objc private func showViewController(sender: UIButton) {
         if let secondViewController = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as? SecondViewController {
             
-            secondViewController.buttonAction = {(text) -> () in
-                self.textLabel.text = text
+            secondViewController.buttonAction = { [weak self] (text) -> () in
+                self?.textLabel.text = text
                 return secondViewController.dismiss(animated: true, completion: nil)
             }
             
             present(secondViewController, animated: true, completion: nil)
         }
-        
     }
     
     private func addConstraints() {
@@ -74,4 +70,3 @@ class ViewController: UIViewController {
         view.setNeedsLayout()
     }
 }
-
