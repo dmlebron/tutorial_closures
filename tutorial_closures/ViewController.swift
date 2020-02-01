@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             
             secondViewController.buttonAction = { [weak self] (text) -> () in
                 self?.textLabel.text = text
-                return secondViewController.dismiss(animated: true, completion: nil)
+                secondViewController.dismiss(animated: true, completion: nil)
             }
             
             present(secondViewController, animated: true, completion: nil)

@@ -10,7 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    fileprivate lazy var textField: UITextField = {
+    private lazy var textField: UITextField = {
         let txt = UITextField()
         txt.returnKeyType = .done
         txt.backgroundColor = .groupTableViewBackground
@@ -21,7 +21,7 @@ class SecondViewController: UIViewController {
         return txt
     }()
     
-    fileprivate lazy var cancelButton: UIButton = {
+    private lazy var cancelButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Cancel", for: .normal)
@@ -31,7 +31,7 @@ class SecondViewController: UIViewController {
         return button
     }()
     
-    fileprivate lazy var updateButton: UIButton = {
+    private lazy var updateButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Update", for: .normal)

@@ -4,3 +4,4 @@ This code is used in [this](https://medium.com/@dmlebron/using-swift-closures-as
 
 ## TODO: 
 - [x] update to XCode 10 and Swift 4
+- [x] updated to XCode 11 and Swift 5 

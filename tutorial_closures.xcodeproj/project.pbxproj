@@ -100,7 +100,7 @@
 					572E2FAD1EBE0542006EBDAE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 9NM4DLTS84;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -110,6 +110,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -288,7 +289,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Davaur.tutorial-closures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -302,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Davaur.tutorial-closures";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
