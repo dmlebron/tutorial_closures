@@ -41,7 +41,7 @@ class SecondViewController: UIViewController {
         return button
     }()
     
-    // TODO: create closure to pass text
+    public var buttonAction: ((String?) -> ())?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,6 +100,10 @@ private extension SecondViewController {
     }
     
     @objc func update() {
-        // TODO: send text
+        guard let buttonAction = buttonAction else {
+            return dismiss(animated: true, completion: nil)
+        }
+        
+        buttonAction(textField.text)
     }
 }
