@@ -45,10 +45,7 @@ class ViewController: UIViewController {
     @objc private func showViewController(sender: UIButton) {
         if let secondViewController = storyboard?.instantiateViewController(withIdentifier: "secondViewController") as? SecondViewController {
             
-            secondViewController.buttonAction = { [weak self] (text) -> () in
-                self?.textLabel.text = text
-                secondViewController.dismiss(animated: true, completion: nil)
-            }
+            // TODO: listen for second view controller closure
             
             present(secondViewController, animated: true, completion: nil)
         }

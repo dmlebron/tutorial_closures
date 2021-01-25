@@ -41,7 +41,7 @@ class SecondViewController: UIViewController {
         return button
     }()
     
-    public var buttonAction: ((String?) -> ())?
+    // TODO: create closure to pass text
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +76,6 @@ private extension SecondViewController {
         textField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
         textField.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        
         // cancel button
         cancelButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         cancelButton.widthAnchor.constraint(equalToConstant: 100).isActive = true
@@ -92,7 +91,6 @@ private extension SecondViewController {
         view.setNeedsLayout()
     }
     
-    /// Resigns First Responder
     func hideKeyboard() {
         textField.resignFirstResponder()
     }
@@ -102,10 +100,6 @@ private extension SecondViewController {
     }
     
     @objc func update() {
-        guard let buttonAction = buttonAction else {
-            return dismiss(animated: true, completion: nil)
-        }
-        
-        buttonAction(textField.text)
+        // TODO: send text
     }
 }
